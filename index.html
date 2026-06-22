@@ -19,23 +19,27 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-  <!-- Inter font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <!-- Font brand LGH: Archivo (corpo) + Bevan (titoli) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700;800;900&family=Bevan&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --cbs-green:       #2e7d32;
-      --cbs-green-dark:  #1b5e20;
-      --cbs-green-light: #e8f5e9;
-      --cbs-lime:        #76ff03;
-      --cbs-teal:        #00bfa5;
-      --cbs-earth:       #5d4037;
-      --cbs-amber:       #f57f17;
-      --cbs-red:         #c62828;
-      --cbs-yellow:      #fdd835;
-      --cbs-yellow-dark: #f9a825;
-      --cbs-blue:        #1a237e;
-      --cbs-bg-alt:      #fafcfa;
+      --cbs-green:       #0e7ccc;  /* primary → electric blue */
+      --cbs-green-dark:  #0a5c9c;  /* primary hover / gradient depth → blue-dark */
+      --cbs-green-light: #e3f2fd;  /* light tint → blue-light */
+      --cbs-lime:        #f7d019;  /* accent dot → yellow */
+      --cbs-teal:        #1aa3e0;  /* secondary blue accent */
+      --cbs-earth:       #5a1212;  /* → brown-light (gradient depth) */
+      --cbs-amber:       #f7d019;  /* status → yellow */
+      --cbs-red:         #f0000b;  /* brand red */
+      --cbs-yellow:      #f7d019;  /* brand yellow */
+      --cbs-yellow-dark: #d9b400;  /* derived darker yellow */
+      --cbs-blue:        #0e7ccc;  /* brand blue */
+      --cbs-blue-deep:   #084b7e;  /* deepest gradient stop */
+      --cbs-brown:       #3b0505;  /* dark chocolate (dark sections) */
+      --cbs-bg-alt:      #fffdf5;  /* warm off-white */
       --cbs-section-pad: 7rem 0;
       --cbs-radius:      1rem;
     }
@@ -43,7 +47,7 @@
     * { box-sizing: border-box; }
 
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: 'Archivo', sans-serif;
       color: #1a1a1a;
       line-height: 1.6;
       overflow-x: hidden;
@@ -54,7 +58,7 @@
       background: rgba(255,255,255,0.92);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(46,125,50,0.08);
+      border-bottom: 1px solid rgba(14,124,204,0.10);
       padding: 0.875rem 0;
       position: sticky;
       top: 0;
@@ -86,7 +90,7 @@
     .btn-cbs-primary:hover {
       color: #fff;
       transform: translateY(-2px);
-      box-shadow: 0 4px 16px rgba(46,125,50,0.3);
+      box-shadow: 0 4px 16px rgba(14,124,204,0.3);
     }
     .btn-cbs-outline {
       background: transparent;
@@ -122,7 +126,7 @@
 
     /* ── Hero ── */
     #hero {
-      background: linear-gradient(160deg, #f0fdf0 0%, #e0f7e0 30%, #fff 70%, #e8f5e9 100%);
+      background: linear-gradient(160deg, #fffdf2 0%, #fff7d6 30%, #fff 70%, #eaf4ff 100%);
       padding: 7rem 0 6rem;
       position: relative;
       overflow: hidden;
@@ -134,13 +138,13 @@
       right: -20%;
       width: 600px;
       height: 600px;
-      background: radial-gradient(circle, rgba(0,191,165,0.08) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(247,208,25,0.14) 0%, transparent 70%);
       border-radius: 50%;
       pointer-events: none;
     }
     .hero-badge {
       display: inline-block;
-      background: linear-gradient(135deg, var(--cbs-red) 0%, #e53935 100%);
+      background: linear-gradient(135deg, var(--cbs-red) 0%, #c20009 100%);
       color: #fff;
       font-size: 0.82rem;
       font-weight: 700;
@@ -150,11 +154,12 @@
       margin-bottom: 1.5rem;
     }
     .hero-title {
+      font-family: 'Bevan', Georgia, serif;
       font-size: clamp(2.2rem, 5.5vw, 3.8rem);
-      font-weight: 900;
-      line-height: 1.1;
+      font-weight: 400;
+      line-height: 1.12;
       color: #111;
-      letter-spacing: -1.5px;
+      letter-spacing: -0.5px;
       margin-bottom: 1.5rem;
     }
     .hero-title .highlight {
@@ -175,14 +180,14 @@
     .mockup-box {
       background: #fff;
       border-radius: 1rem;
-      box-shadow: 0 16px 48px rgba(46,125,50,0.12), 0 2px 8px rgba(0,0,0,0.06);
+      box-shadow: 0 16px 48px rgba(14,124,204,0.12), 0 2px 8px rgba(0,0,0,0.06);
       padding: 0;
       min-height: 340px;
       overflow: hidden;
-      border: 1px solid rgba(46,125,50,0.1);
+      border: 1px solid rgba(14,124,204,0.1);
     }
     .mockup-topbar {
-      background: var(--cbs-green-dark);
+      background: var(--cbs-brown);
       padding: 0.6rem 1rem;
       display: flex;
       align-items: center;
@@ -295,7 +300,7 @@
       background: #eee;
     }
     .mockup-table-cell:nth-child(1) { width: 20%; }
-    .mockup-table-cell:nth-child(2) { width: 35%; background: #e8f5e9; }
+    .mockup-table-cell:nth-child(2) { width: 35%; background: #e3f2fd; }
     .mockup-table-cell:nth-child(3) { width: 15%; }
     .mockup-table-cell:nth-child(4) { width: 30%; }
     .mockup-table-status {
@@ -310,7 +315,7 @@
 
     /* ── Stats bar ── */
     #stats {
-      background: linear-gradient(135deg, var(--cbs-green-dark) 0%, var(--cbs-green) 60%, var(--cbs-teal) 100%);
+      background: linear-gradient(135deg, var(--cbs-brown) 0%, var(--cbs-green-dark) 100%);
       padding: 3.5rem 0;
       color: #fff;
       position: relative;
@@ -343,10 +348,11 @@
       margin-bottom: 0.5rem;
     }
     .section-title {
-      font-size: clamp(1.75rem, 4vw, 2.5rem);
-      font-weight: 800;
-      letter-spacing: -0.5px;
-      line-height: 1.15;
+      font-family: 'Bevan', Georgia, serif;
+      font-size: clamp(1.6rem, 3.6vw, 2.3rem);
+      font-weight: 400;
+      letter-spacing: -0.2px;
+      line-height: 1.18;
       margin-bottom: 1rem;
     }
     .section-sub {
@@ -394,7 +400,7 @@
     .feature-icon-wrap {
       width: 48px;
       height: 48px;
-      background: linear-gradient(135deg, var(--cbs-green-light) 0%, #c8e6c9 100%);
+      background: linear-gradient(135deg, var(--cbs-green-light) 0%, #bbdefb 100%);
       border-radius: 12px;
       display: flex;
       align-items: center;
@@ -415,7 +421,7 @@
 
     /* ── Social Proof ── */
     #proof {
-      background: linear-gradient(160deg, var(--cbs-green-dark) 0%, #2e5930 50%, var(--cbs-earth) 100%);
+      background: linear-gradient(160deg, var(--cbs-brown) 0%, var(--cbs-earth) 50%, #2a0a0a 100%);
       color: #fff;
       position: relative;
       overflow: hidden;
@@ -427,7 +433,7 @@
       right: -10%;
       width: 500px;
       height: 500px;
-      background: radial-gradient(circle, rgba(253,216,53,0.08) 0%, transparent 60%);
+      background: radial-gradient(circle, rgba(247,208,25,0.10) 0%, transparent 60%);
       pointer-events: none;
     }
     .proof-inner {
@@ -497,7 +503,7 @@
 
     /* ── Beta Offer ── */
     #beta-offer {
-      background: linear-gradient(160deg, var(--cbs-green-dark) 0%, var(--cbs-green) 50%, var(--cbs-green-dark) 100%);
+      background: linear-gradient(160deg, var(--cbs-green) 0%, var(--cbs-green-dark) 50%, var(--cbs-blue-deep) 100%);
       color: #fff;
       padding: 5rem 0;
       position: relative;
@@ -510,7 +516,7 @@
       left: -15%;
       width: 600px;
       height: 600px;
-      background: radial-gradient(circle, rgba(253,216,53,0.12) 0%, transparent 60%);
+      background: radial-gradient(circle, rgba(247,208,25,0.14) 0%, transparent 60%);
       pointer-events: none;
     }
     .beta-inner {
@@ -570,7 +576,7 @@
     }
     .form-control:focus, .form-select:focus {
       border-color: var(--cbs-green);
-      box-shadow: 0 0 0 0.2rem rgba(46,125,50,0.15);
+      box-shadow: 0 0 0 0.2rem rgba(14,124,204,0.15);
     }
     .form-label {
       font-weight: 600;
@@ -584,12 +590,12 @@
       padding: 1rem 1.25rem;
       font-weight: 500;
     }
-    #form-success { background: var(--cbs-green-light); color: var(--cbs-green-dark); border: 1px solid #a5d6a7; }
-    #form-error   { background: #ffebee; color: #c62828; border: 1px solid #ef9a9a; }
+    #form-success { background: var(--cbs-green-light); color: var(--cbs-green-dark); border: 1px solid #90caf9; }
+    #form-error   { background: #fff0ef; color: var(--cbs-red); border: 1px solid #f5a3a0; }
 
     /* ── Footer ── */
     footer {
-      background: var(--cbs-green-dark);
+      background: var(--cbs-brown);
       color: rgba(255,255,255,0.7);
       padding: 2.5rem 0;
       font-size: 0.88rem;
@@ -601,7 +607,7 @@
     .footer-logo {
       font-size: 1.2rem;
       font-weight: 800;
-      color: var(--cbs-green) !important;
+      color: var(--cbs-yellow) !important;
       letter-spacing: -0.5px;
     }
 
@@ -893,7 +899,7 @@
     <div class="proof-inner fade-in-section">
       <div class="proof-badge" data-i18n="proof_badge">✦ La nostra storia</div>
       <blockquote class="proof-quote" data-i18n="proof_quote">
-        "Abbiamo progettato CBS per il nostro progetto di allevamento di insetti. Il finanziamento non è arrivato, ma il software sì. Dopo averlo presentato a uno dei più grandi produttori italiani — che si è dimostrato molto interessato — abbiamo deciso di aprire la beta."
+        "Abbiamo sviluppato il CBS per il nostro progetto di allevamento di grilli. Il fundraising non è andato a buon fine, ma il software è nato lo stesso. Dopo averlo presentato a un grande allevatore di insetti italiano, abbiamo deciso di lanciare la versione beta."
       </blockquote>
       <p class="proof-attribution" data-i18n="proof_attribution">— Timur, co-fondatore · Los Grillos Hermanos</p>
     </div>
@@ -1081,7 +1087,7 @@ const translations = {
     feat6_title: "Storico completo",
     feat6_text: "Audit log di ogni azione. Confronta cicli passati, identifica pattern, migliora i protocolli nel tempo.",
     proof_badge: "✦ La nostra storia",
-    proof_quote: "\"Abbiamo progettato CBS per il nostro progetto di allevamento di insetti. Il finanziamento non è arrivato, ma il software sì. Dopo averlo presentato a uno dei più grandi produttori italiani — che si è dimostrato molto interessato — abbiamo deciso di aprire la beta.\"",
+    proof_quote: "\"Abbiamo sviluppato il CBS per il nostro progetto di allevamento di grilli. Il fundraising non è andato a buon fine, ma il software è nato lo stesso. Dopo averlo presentato a un grande allevatore di insetti italiano, abbiamo deciso di lanciare la versione beta.\"",
     proof_attribution: "— Timur, co-fondatore · Los Grillos Hermanos",
     how_eyebrow: "Come funziona",
     how_title: "Operativo in poche ore, non settimane",
@@ -1158,7 +1164,7 @@ const translations = {
     feat6_title: "Full history",
     feat6_text: "Audit log of every action. Compare past cycles, identify patterns, improve protocols over time.",
     proof_badge: "✦ Our story",
-    proof_quote: "\"We designed CBS for our own insect farming project. The funding didn't come through, but the software did. After presenting it to one of Italy's largest producers — who showed strong interest — we decided to open the beta.\"",
+    proof_quote: "\"We designed CBS for our own cricket farming project. The fundraising didn't work out, but the software was born anyway. After presenting it to a major Italian insect farmer, we decided to launch the beta version.\"",
     proof_attribution: "— Timur, co-founder · Los Grillos Hermanos",
     how_eyebrow: "How it works",
     how_title: "Up and running in hours, not weeks",
@@ -1235,7 +1241,7 @@ const translations = {
     feat6_title: "Historique complet",
     feat6_text: "Journal d'audit de chaque action. Comparez les cycles passés, identifiez des tendances, améliorez vos protocoles.",
     proof_badge: "✦ Notre histoire",
-    proof_quote: "\"Nous avons conçu CBS pour notre propre projet d'élevage d'insectes. Le financement n'est pas arrivé, mais le logiciel oui. Après l'avoir présenté à l'un des plus grands producteurs italiens — qui s'est montré très intéressé — nous avons décidé d'ouvrir la bêta.\"",
+    proof_quote: "\"Nous avons conçu le CBS pour notre projet d'élevage de grillons. La levée de fonds n'a pas abouti, mais le logiciel est né quand même. Après l'avoir présenté à un grand éleveur d'insectes italien, nous avons décidé de lancer la version bêta.\"",
     proof_attribution: "— Timur, co-fondateur · Los Grillos Hermanos",
     how_eyebrow: "Comment ça marche",
     how_title: "Opérationnel en quelques heures, pas en semaines",
@@ -1312,7 +1318,7 @@ const translations = {
     feat6_title: "Vollständige Historie",
     feat6_text: "Audit-Log jeder Aktion. Vergleichen Sie vergangene Zyklen, erkennen Sie Muster, verbessern Sie Protokolle.",
     proof_badge: "✦ Unsere Geschichte",
-    proof_quote: "\"Wir haben CBS für unser eigenes Insektenzucht-Projekt entwickelt. Die Finanzierung kam nicht, aber die Software schon. Nachdem wir es einem der größten italienischen Produzenten präsentiert haben — der großes Interesse zeigte — haben wir beschlossen, die Beta zu öffnen.\"",
+    proof_quote: "\"Wir haben CBS für unser Grillenzucht-Projekt entwickelt. Das Fundraising hat nicht geklappt, aber die Software entstand trotzdem. Nachdem wir sie einem großen italienischen Insektenzüchter vorgestellt haben, haben wir beschlossen, die Beta-Version zu starten.\"",
     proof_attribution: "— Timur, Mitgründer · Los Grillos Hermanos",
     how_eyebrow: "So funktioniert's",
     how_title: "In Stunden einsatzbereit, nicht Wochen",
